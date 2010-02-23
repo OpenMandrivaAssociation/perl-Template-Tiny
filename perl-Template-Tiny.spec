@@ -11,7 +11,9 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Template/%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires: perl(Capture::Tiny)
 BuildRequires: perl(Test::More)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
@@ -28,11 +30,10 @@ Template manpage Toolkit, in as few lines of code as possible.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+%make
 
 %check
-%{make} test
+%make test
 
 %install
 rm -rf %buildroot
@@ -46,5 +47,3 @@ rm -rf %buildroot
 %doc README LICENSE Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
