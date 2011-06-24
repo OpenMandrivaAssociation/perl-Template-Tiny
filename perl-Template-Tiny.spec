@@ -1,9 +1,9 @@
 %define upstream_name    Template-Tiny
-%define upstream_version 0.11
+%define upstream_version 1.12
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Template Toolkit reimplemented in as little code as possible
 License:    GPL+ or Artistic
