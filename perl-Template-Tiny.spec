@@ -1,15 +1,15 @@
 %define upstream_name    Template-Tiny
-%define upstream_version 1.12
+%define upstream_version 1.16
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Template Toolkit reimplemented in as little code as possible
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Template/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/karenetheridge/Template-Tiny
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Template-Tiny-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
