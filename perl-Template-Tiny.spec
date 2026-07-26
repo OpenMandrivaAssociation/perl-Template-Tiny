@@ -1,15 +1,13 @@
 %define upstream_name    Template-Tiny
-%define upstream_version 1.16
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.16
+Release:	2
 
 Summary:	Template Toolkit reimplemented in as little code as possible
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/karenetheridge/Template-Tiny
-Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Template-Tiny-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Template-Tiny-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -27,7 +25,7 @@ BuildArch:	noarch
 Template manpage Toolkit, in as few lines of code as possible.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
