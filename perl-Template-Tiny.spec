@@ -1,13 +1,14 @@
 %define upstream_name    Template-Tiny
+%define upstream_version 1.16
 Name:		perl-%{upstream_name}
 Version:	1.16
-Release:	2
+Release:	1
 
 Summary:	Template Toolkit reimplemented in as little code as possible
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/karenetheridge/Template-Tiny
-Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Template-Tiny-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Template-Tiny-1.16.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -42,28 +43,3 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
 
-%changelog
-* Fri Jun 24 2011 Guillaume Rousse <guillomovitch@mandriva.org> 1.120.0-1mdv2011.0
-+ Revision: 687001
-- update to new version 1.12
-
-* Sun Apr 17 2011 Funda Wang <fwang@mandriva.org> 0.110.0-2
-+ Revision: 654302
-- rebuild for updated spec-helper
-
-* Tue Feb 23 2010 Jérôme Quelin <jquelin@mandriva.org> 0.110.0-1mdv2011.0
-+ Revision: 510235
-- adding missing buildrequires:
-- update to 0.11
-
-* Sun Jan 24 2010 Jérôme Quelin <jquelin@mandriva.org> 0.100.0-1mdv2010.1
-+ Revision: 495433
-- update to 0.10
-
-* Thu Dec 24 2009 Jérôme Quelin <jquelin@mandriva.org> 0.90.0-1mdv2010.1
-+ Revision: 482097
-- import perl-Template-Tiny
-
-
-* Thu Dec 24 2009 cpan2dist 0.09-1mdv
-- initial mdv release, generated with cpan2dist
